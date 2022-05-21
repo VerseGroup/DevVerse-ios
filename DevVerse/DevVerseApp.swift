@@ -6,15 +6,17 @@
 //
 
 import SwiftUI
-import OAuthSwift
 
 @main
 struct DevVerseApp: App {
+    @StateObject var github: GitHubService = GitHubService()
+    
     var body: some Scene {
         WindowGroup {
             AuthView()
                 .onOpenURL { url in
                     print("url: \(url.debugDescription)")
+                    github.handleOAuthURL(url: url)
                 }
         }
     }
