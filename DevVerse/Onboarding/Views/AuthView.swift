@@ -8,27 +8,43 @@
 import SwiftUI
 
 struct AuthView: View {
+    
+    let url: URL = URL(string: "https://github.com/login/oauth/authorize?client_id=\(clientId)")!
+    
     var body: some View {
-        VStack {
-            Text("Welcome to DevVerse!")
-            
-            NavigationLink {
-                GitHubAuthView()
-            } label: {
-                Label {
-                    Text("Sign in with GitHub")
-                } icon: {
-                    Image("github-light")
-                        .resizable()
-                        .frame(width: 32, height: 32)
+        NavigationView {
+            VStack {
+                HStack {
+                    Text("Sign in with GitHub to get started with DevVerse")
+                        .font(.headline)
+                    Spacer()
                 }
-                .foregroundColor(Color.white)
-                .padding()
-                .background(Color.black)
-                .cornerRadius(10)
+                
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                Spacer()
+                
+                Link(destination: url) {
+                    Label {
+                        Text("Sign in with GitHub")
+                    } icon: {
+                        Image("github-light")
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                    }
+                    .foregroundColor(Color.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(10)
+                }
+                
+                Spacer()
+                
             }
-
-
+            .padding()
+            .navigationTitle("Welcome")
         }
     }
 }

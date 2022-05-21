@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import OAuthSwift
 
 @main
 struct DevVerseApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AuthView()
+                .onOpenURL { url in
+                    print("url: \(url.debugDescription)")
+                }
         }
     }
 }
