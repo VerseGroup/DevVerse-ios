@@ -14,6 +14,8 @@
 		16D845F428397CF6001ED072 /* DevVerseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D845F328397CF6001ED072 /* DevVerseTests.swift */; };
 		16D845FE28397CF6001ED072 /* DevVerseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D845FD28397CF6001ED072 /* DevVerseUITests.swift */; };
 		16D8460028397CF6001ED072 /* DevVerseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D845FF28397CF6001ED072 /* DevVerseUITestsLaunchTests.swift */; };
+		16D84615283989D7001ED072 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D84614283989D7001ED072 /* AuthView.swift */; };
+		16D8461728398A66001ED072 /* GitHubAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D8461628398A66001ED072 /* GitHubAuthView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,9 @@
 		16D845F928397CF6001ED072 /* DevVerseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevVerseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		16D845FD28397CF6001ED072 /* DevVerseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevVerseUITests.swift; sourceTree = "<group>"; };
 		16D845FF28397CF6001ED072 /* DevVerseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DevVerseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		16D84610283986FA001ED072 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		16D84614283989D7001ED072 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		16D8461628398A66001ED072 /* GitHubAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubAuthView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +99,12 @@
 		16D845E128397CF5001ED072 /* DevVerse */ = {
 			isa = PBXGroup;
 			children = (
+				16D84611283989BC001ED072 /* Onboarding */,
+				16D84610283986FA001ED072 /* Info.plist */,
+				16D8460F2839821A001ED072 /* Repositories */,
+				16D8460C28398211001ED072 /* Models */,
+				16D8460E28398216001ED072 /* ViewModels */,
+				16D8460D28398214001ED072 /* Views */,
 				16D845E228397CF5001ED072 /* DevVerseApp.swift */,
 				16D845E428397CF5001ED072 /* ContentView.swift */,
 				16D845E628397CF5001ED072 /* Assets.xcassets */,
@@ -125,6 +136,59 @@
 				16D845FF28397CF6001ED072 /* DevVerseUITestsLaunchTests.swift */,
 			);
 			path = DevVerseUITests;
+			sourceTree = "<group>";
+		};
+		16D8460C28398211001ED072 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		16D8460D28398214001ED072 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		16D8460E28398216001ED072 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		16D8460F2839821A001ED072 /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		16D84611283989BC001ED072 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				16D84613283989CD001ED072 /* ViewModels */,
+				16D84612283989CA001ED072 /* Views */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		16D84612283989CA001ED072 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				16D84614283989D7001ED072 /* AuthView.swift */,
+				16D8461628398A66001ED072 /* GitHubAuthView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		16D84613283989CD001ED072 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -259,6 +323,8 @@
 			files = (
 				16D845E528397CF5001ED072 /* ContentView.swift in Sources */,
 				16D845E328397CF5001ED072 /* DevVerseApp.swift in Sources */,
+				16D84615283989D7001ED072 /* AuthView.swift in Sources */,
+				16D8461728398A66001ED072 /* GitHubAuthView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +486,7 @@
 				DEVELOPMENT_TEAM = P5ST498MF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevVerse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +516,7 @@
 				DEVELOPMENT_TEAM = P5ST498MF7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DevVerse/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
