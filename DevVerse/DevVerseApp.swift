@@ -9,14 +9,15 @@ import SwiftUI
 
 @main
 struct DevVerseApp: App {
-    @StateObject var github: GitHubService = GitHubService()
+    @StateObject var auth: AuthService = AuthService.instance
     
     var body: some Scene {
         WindowGroup {
-            AuthView()
+            RouterView()
+                .environmentObject(auth)
                 .onOpenURL { url in
                     print("url: \(url.debugDescription)")
-                    github.handleOAuthURL(url: url)
+                    auth.github.handleOAuthURL(url: url)
                 }
         }
     }

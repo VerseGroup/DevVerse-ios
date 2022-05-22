@@ -10,6 +10,9 @@ import Alamofire
 
 class GitHubService: ObservableObject {
     
+    @Published var token: String?
+    
+    // returns OAuth token
     func handleOAuthURL(url: URL) {
         let urlString = url.absoluteString
         let code = String(urlString.dropFirst(17))
@@ -17,16 +20,18 @@ class GitHubService: ObservableObject {
         getToken(code: code)
     }
     
+    // returns OAuth token
     func getToken(code: String) {
-        let headers: HTTPHeaders = [
-            "Accept": "application/json"
-        ]
-        
         let params: Parameters = [
             "client_id": clientId,
             "client_secret": clientSecret,
             "code": code
         ]
+        
+        let headers: HTTPHeaders = [
+            "Accept": "application/json"
+        ]
+        
         
         AF.request("https://github.com/login/oauth/access_token", method: .post, parameters: params, headers: headers)
         //                            .cURLDescription { description in
@@ -37,8 +42,23 @@ class GitHubService: ObservableObject {
         //                            })
             .responseDecodable(of: Token.self) { response in
                 print(response.value.debugDescription)
+                self.token = response.value?.accessToken
             }
         
+        // async await
+        //        let dataTask = AF.request("https://github.com/login/oauth/access_token", method: .post, parameters: params, headers: headers)
+        //        //                            .cURLDescription { description in
+        //        //                                print(description)
+        //        //                            }
+        //            .serializingDecodable(Token.self)
+        //
+        //        do {
+        //            let authToken = try await dataTask.value.accessToken
+        //            print(authToken)
+        //            return authToken
+        //        } catch {
+        //            print(error)
+        //        }
     }
 }
 

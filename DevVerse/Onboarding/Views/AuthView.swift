@@ -9,7 +9,11 @@ import SwiftUI
 
 struct AuthView: View {
     
-    let url: URL = URL(string: "https://github.com/login/oauth/authorize?client_id=\(clientId)")!
+    @EnvironmentObject var vm: AuthService
+    
+    @State var showSignUpView: Bool = false
+    
+    let url: URL = URL(string: "https://github.com/login/oauth/authorize?client_id=\(clientId)&scope=repo%20repo_deployment%20admin:repo_hook%20admin:org%20admin:public_key%20admin:org_hook%20gist%20notifications%20user%20delete_repo%20write:discussion%20write:packages%20read:packages%20admin:gpg_key%20codespace%20workflow")!
     
     var body: some View {
         NavigationView {
@@ -25,6 +29,23 @@ struct AuthView: View {
                 Spacer()
                 Spacer()
                 Spacer()
+                
+                Button {
+                    showSignUpView.toggle()
+                } label: {
+                    Label {
+                        Text("Sign up with GitHub")
+                    } icon: {
+                        Image("github-light")
+                            .resizable()
+                            .frame(width: 32, height: 32)
+                    }
+                    .foregroundColor(Color.white)
+                    .padding()
+                    .background(Color.black)
+                    .cornerRadius(10)
+                }
+                
                 
                 Link(destination: url) {
                     Label {
@@ -45,6 +66,10 @@ struct AuthView: View {
             }
             .padding()
             .navigationTitle("Welcome")
+        }
+        .sheet(isPresented: $showSignUpView) {
+            SignUpView()
+                .environmentObject(vm)
         }
     }
 }
