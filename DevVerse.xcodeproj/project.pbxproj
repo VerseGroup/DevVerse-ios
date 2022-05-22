@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160F9077283A1D5E0077D47C /* RepoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9076283A1D5E0077D47C /* RepoCardView.swift */; };
+		160F9079283A1F410077D47C /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9078283A1F410077D47C /* RepoDetailView.swift */; };
 		164CDF682839A7FE000BE585 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 164CDF672839A7FE000BE585 /* Alamofire */; };
 		164CDF6A2839B3F2000BE585 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164CDF692839B3F2000BE585 /* APIService.swift */; };
 		164CDF6C2839B47B000BE585 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164CDF6B2839B47B000BE585 /* SignUpView.swift */; };
@@ -50,6 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		160F9076283A1D5E0077D47C /* RepoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCardView.swift; sourceTree = "<group>"; };
+		160F9078283A1F410077D47C /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
 		164CDF692839B3F2000BE585 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		164CDF6B2839B47B000BE585 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		164CDF6D2839B619000BE585 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -185,6 +189,8 @@
 				164CDF732839F00B000BE585 /* HomeView.swift */,
 				164CDF752839F015000BE585 /* AppView.swift */,
 				164CDF772839F0B7000BE585 /* BoardsView.swift */,
+				160F9076283A1D5E0077D47C /* RepoCardView.swift */,
+				160F9078283A1F410077D47C /* RepoDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -390,6 +396,7 @@
 				164CDF742839F00B000BE585 /* HomeView.swift in Sources */,
 				16D8461F28399050001ED072 /* WebView.swift in Sources */,
 				16D8462A2839A2F4001ED072 /* AuthViewModel.swift in Sources */,
+				160F9077283A1D5E0077D47C /* RepoCardView.swift in Sources */,
 				16D845E328397CF5001ED072 /* DevVerseApp.swift in Sources */,
 				16D846282839A2D5001ED072 /* GitHubService.swift in Sources */,
 				16F08F8F283A0BDC00147C3E /* APIRepository.swift in Sources */,
@@ -401,6 +408,7 @@
 				164CDF6E2839B61A000BE585 /* AuthService.swift in Sources */,
 				164CDF6C2839B47B000BE585 /* SignUpView.swift in Sources */,
 				16D84615283989D7001ED072 /* AuthView.swift in Sources */,
+				160F9079283A1F410077D47C /* RepoDetailView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

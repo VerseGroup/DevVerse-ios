@@ -13,15 +13,19 @@ struct HomeView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
-                Text(auth.user?.email ?? "AAAAA")
-                List {
-                    ForEach(api.repos) { repo in
-                        Text(repo.name)
-                    }
+            VStack(alignment: .leading) {
+                Text("Welcome to DevVerse,")
+                    .font(.title)
+                    .bold()
+                Text(auth.user?.name ?? "AAAAAA")
+                    .font(.largeTitle)
+                    .bold()
+                
+                ForEach(api.repos) { repo in
+                    RepoCardView(repository: repo)
                 }
-                .listStyle(.insetGrouped)
             }
+            .padding()
         }
         .onAppear {
             Task {

@@ -79,4 +79,21 @@ class APIRepository: ObservableObject {
             print("error: \(error)")
         }
     }
+    
+    func addHook(repo: String) {
+        
+        let params: [String: String] = [
+            "oauth_token": authService.user?.token ?? "AAAAAAAAA",
+            "repo": repo
+        ]
+        
+        
+        AF.request(baseURL + "/addWebhook", method: .post, parameters: params, encoding: JSONEncoding.default)
+            .cURLDescription { description in
+                print(description)
+            }
+            .response(completionHandler: { data in
+                debugPrint("LOL: \(data.debugDescription)")
+            })
+    }
 }
