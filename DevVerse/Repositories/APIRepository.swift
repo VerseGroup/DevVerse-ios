@@ -83,6 +83,7 @@ class APIRepository: ObservableObject {
         }
     }
     
+    @MainActor
     func getNotifications() async {
         let params: [String: String] = [
             "endpoint": "notifications",
