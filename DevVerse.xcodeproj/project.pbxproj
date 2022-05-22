@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		160F9077283A1D5E0077D47C /* RepoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9076283A1D5E0077D47C /* RepoCardView.swift */; };
 		160F9079283A1F410077D47C /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9078283A1F410077D47C /* RepoDetailView.swift */; };
-		160F907B283A3D210077D47C /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F907A283A3D210077D47C /* Task.swift */; };
 		164CDF682839A7FE000BE585 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 164CDF672839A7FE000BE585 /* Alamofire */; };
 		164CDF6A2839B3F2000BE585 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164CDF692839B3F2000BE585 /* APIService.swift */; };
 		164CDF6C2839B47B000BE585 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 164CDF6B2839B47B000BE585 /* SignUpView.swift */; };
@@ -55,7 +54,6 @@
 /* Begin PBXFileReference section */
 		160F9076283A1D5E0077D47C /* RepoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCardView.swift; sourceTree = "<group>"; };
 		160F9078283A1F410077D47C /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
-		160F907A283A3D210077D47C /* Task.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 		164CDF692839B3F2000BE585 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		164CDF6B2839B47B000BE585 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		164CDF6D2839B619000BE585 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
@@ -181,7 +179,6 @@
 			children = (
 				164CDF712839C4E7000BE585 /* User.swift */,
 				16F08F90283A166700147C3E /* Repository.swift */,
-				160F907A283A3D210077D47C /* Task.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -405,7 +402,6 @@
 				16F08F8F283A0BDC00147C3E /* APIRepository.swift in Sources */,
 				164CDF702839B83D000BE585 /* RouterView.swift in Sources */,
 				164CDF6A2839B3F2000BE585 /* APIService.swift in Sources */,
-				160F907B283A3D210077D47C /* Task.swift in Sources */,
 				164CDF722839C4E7000BE585 /* User.swift in Sources */,
 				16F08F91283A166700147C3E /* Repository.swift in Sources */,
 				164CDF762839F015000BE585 /* AppView.swift in Sources */,
