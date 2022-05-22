@@ -7,20 +7,22 @@
 
 import Foundation
 
-struct Notification: Codable {
-    var repositoryName: String
-    var url: String
+struct Notification: Codable, Identifiable {
+    var id: String
+    var repository: NotificationRepo
+    var subject: NotificationSubject
     var unread: Bool
-    var updatedAt: String
+    var updated_at: String
+}
+
+struct NotificationSubject: Codable {
     var title: String
     var type: String
-    
-    enum CodingKeys: String, CodingKey {
-        case repositoryName = "repository_name"
-        case url
-        case unread
-        case updatedAt = "updated_at"
-        case title
-        case type
-    }
+}
+
+struct NotificationRepo: Codable, Identifiable {
+    var id: Int
+    var full_name: String
+    var html_url: String
+    var description: String
 }

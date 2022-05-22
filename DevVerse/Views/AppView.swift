@@ -13,16 +13,17 @@ struct AppView: View {
             HomeView()
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("Home")
                 }
             
             IdeasView()
                 .tabItem {
                     Image(systemName: "lightbulb")
-                    Text("Ideas")
                 }
             
-            
+            NotificationsView()
+                .tabItem {
+                    Image(systemName: "bell.fill")
+                }
         }
     }
 }

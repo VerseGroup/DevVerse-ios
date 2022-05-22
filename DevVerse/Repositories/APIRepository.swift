@@ -15,6 +15,7 @@ class APIRepository: ObservableObject {
     
     @Published var repos: [Repository] = []
     @Published var ideas: [Idea] = []
+    @Published var notifications: [Notification] = []
     
     // MARK: GITHUB FUNCTIONS
     
@@ -77,6 +78,39 @@ class APIRepository: ObservableObject {
             let product = try decoder.decode([Repository].self, from: response)
             repos = product
             debugPrint("product:::::::: \(product)")
+        } catch {
+            print("error: \(error)")
+        }
+    }
+    
+    func getNotifications() async {
+        let params: [String: String] = [
+            "endpoint": "notifications",
+            "method": "GET",
+            "oauth_token": authService.user?.token ?? "AAAAAAAAA"
+        ]
+        
+        AF.request(baseURL + "/relay", method: .post, parameters: params, encoding: JSONEncoding.default)
+            .cURLDescription { description in
+                print(description)
+            }
+            .response(completionHandler: { data in
+                debugPrint("LOL: \(data.debugDescription)")
+            })
+        
+        let dataTask = AF.request(baseURL + "/relay", method: .post, parameters: params, encoding: JSONEncoding.default)
+            .serializingDecodable(GitHubMessage.self)
+        
+        let response = await dataTask.response
+        debugPrint(response.data)
+        
+        do {
+            let response = try await dataTask.value.response.data(using: .utf8)!
+            
+            let decoder = JSONDecoder()
+            let product = try decoder.decode([Notification].self, from: response)
+            notifications = product
+            debugPrint("product:::::::: \(notifications)")
         } catch {
             print("error: \(error)")
         }

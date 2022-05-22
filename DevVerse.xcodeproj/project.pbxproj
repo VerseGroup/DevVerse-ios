@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		16051854283A71E0004BB6CA /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16051853283A71E0004BB6CA /* Notifications.swift */; };
+		16051856283A726A004BB6CA /* NotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16051855283A726A004BB6CA /* NotificationsView.swift */; };
+		16051858283A7274004BB6CA /* NotificationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16051857283A7274004BB6CA /* NotificationCardView.swift */; };
 		160F9077283A1D5E0077D47C /* RepoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9076283A1D5E0077D47C /* RepoCardView.swift */; };
 		160F9079283A1F410077D47C /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9078283A1F410077D47C /* RepoDetailView.swift */; };
 		160F907D283A4CD80077D47C /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F907C283A4CD80077D47C /* Idea.swift */; };
@@ -58,6 +60,8 @@
 
 /* Begin PBXFileReference section */
 		16051853283A71E0004BB6CA /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
+		16051855283A726A004BB6CA /* NotificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationsView.swift; sourceTree = "<group>"; };
+		16051857283A7274004BB6CA /* NotificationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationCardView.swift; sourceTree = "<group>"; };
 		160F9076283A1D5E0077D47C /* RepoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCardView.swift; sourceTree = "<group>"; };
 		160F9078283A1F410077D47C /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
 		160F907C283A4CD80077D47C /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
@@ -206,6 +210,8 @@
 				160F907E283A4F630077D47C /* IdeasView.swift */,
 				160F9080283A50030077D47C /* IdeaView.swift */,
 				160F9082283A51000077D47C /* NewIdeaView.swift */,
+				16051855283A726A004BB6CA /* NotificationsView.swift */,
+				16051857283A7274004BB6CA /* NotificationCardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -421,6 +427,8 @@
 				164CDF6A2839B3F2000BE585 /* APIService.swift in Sources */,
 				160F907D283A4CD80077D47C /* Idea.swift in Sources */,
 				164CDF722839C4E7000BE585 /* User.swift in Sources */,
+				16051856283A726A004BB6CA /* NotificationsView.swift in Sources */,
+				16051858283A7274004BB6CA /* NotificationCardView.swift in Sources */,
 				160F907F283A4F630077D47C /* IdeasView.swift in Sources */,
 				16F08F91283A166700147C3E /* Repository.swift in Sources */,
 				164CDF762839F015000BE585 /* AppView.swift in Sources */,
