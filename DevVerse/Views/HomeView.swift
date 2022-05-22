@@ -8,8 +8,26 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var auth: AuthService
+    @StateObject var api: APIRepository = APIRepository()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView {
+            VStack {
+                Text(auth.user?.email ?? "AAAAA")
+                List {
+                    ForEach(api.repos) { repo in
+                        Text(repo.name)
+                    }
+                }
+                .listStyle(.insetGrouped)
+            }
+        }
+        .onAppear {
+            Task {
+                await api.getRepos()
+            }
+        }
     }
 }
 

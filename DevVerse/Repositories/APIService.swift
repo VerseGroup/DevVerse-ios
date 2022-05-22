@@ -21,12 +21,12 @@ class APIService: ObservableObject {
         
         
         AF.request(baseURL + "/signIn", method: .post, parameters: params, encoding: JSONEncoding.default)
-                                    .cURLDescription { description in
-                                        print("curl: " + description)
-                                    }
-                                    .response(completionHandler: { data in
-                                        debugPrint("data: " + data.debugDescription)
-                                    })
+            .cURLDescription { description in
+                print("curl: " + description)
+            }
+            .response(completionHandler: { data in
+                debugPrint("data: " + data.debugDescription)
+            })
         
         let dataTask = AF.request(baseURL + "/signIn", method: .post, parameters: params, encoding: JSONEncoding.default)
             .serializingDecodable(User.self)
@@ -35,6 +35,7 @@ class APIService: ObservableObject {
         debugPrint(response.data)
         
         do {
+            
             return try await dataTask.value
         } catch {
             print("error: \(error)")
@@ -53,12 +54,12 @@ class APIService: ObservableObject {
         ]
         
         AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
-                                    .cURLDescription { description in
-                                        print(description)
-                                    }
-                                    .response(completionHandler: { data in
-                                        debugPrint(data)
-                                    })
+            .cURLDescription { description in
+                print(description)
+            }
+            .response(completionHandler: { data in
+                debugPrint(data)
+            })
         
         let dataTask = AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
             .serializingDecodable(User.self)
@@ -74,4 +75,5 @@ class APIService: ObservableObject {
         
         return User(id: 0, username: "", email: "", phone: "", name: "", token: "")
     }
+    
 }

@@ -28,6 +28,8 @@
 		16D8462128399297001ED072 /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D8462028399297001ED072 /* Keys.swift */; };
 		16D846282839A2D5001ED072 /* GitHubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D846272839A2D5001ED072 /* GitHubService.swift */; };
 		16D8462A2839A2F4001ED072 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16D846292839A2F4001ED072 /* AuthViewModel.swift */; };
+		16F08F8F283A0BDC00147C3E /* APIRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F08F8E283A0BDC00147C3E /* APIRepository.swift */; };
+		16F08F91283A166700147C3E /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16F08F90283A166700147C3E /* Repository.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +74,8 @@
 		16D8462028399297001ED072 /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		16D846272839A2D5001ED072 /* GitHubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubService.swift; sourceTree = "<group>"; };
 		16D846292839A2F4001ED072 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		16F08F8E283A0BDC00147C3E /* APIRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRepository.swift; sourceTree = "<group>"; };
+		16F08F90283A166700147C3E /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				164CDF712839C4E7000BE585 /* User.swift */,
+				16F08F90283A166700147C3E /* Repository.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -197,6 +202,7 @@
 				16D846272839A2D5001ED072 /* GitHubService.swift */,
 				164CDF692839B3F2000BE585 /* APIService.swift */,
 				164CDF6D2839B619000BE585 /* AuthService.swift */,
+				16F08F8E283A0BDC00147C3E /* APIRepository.swift */,
 			);
 			path = Repositories;
 			sourceTree = "<group>";
@@ -386,9 +392,11 @@
 				16D8462A2839A2F4001ED072 /* AuthViewModel.swift in Sources */,
 				16D845E328397CF5001ED072 /* DevVerseApp.swift in Sources */,
 				16D846282839A2D5001ED072 /* GitHubService.swift in Sources */,
+				16F08F8F283A0BDC00147C3E /* APIRepository.swift in Sources */,
 				164CDF702839B83D000BE585 /* RouterView.swift in Sources */,
 				164CDF6A2839B3F2000BE585 /* APIService.swift in Sources */,
 				164CDF722839C4E7000BE585 /* User.swift in Sources */,
+				16F08F91283A166700147C3E /* Repository.swift in Sources */,
 				164CDF762839F015000BE585 /* AppView.swift in Sources */,
 				164CDF6E2839B61A000BE585 /* AuthService.swift in Sources */,
 				164CDF6C2839B47B000BE585 /* SignUpView.swift in Sources */,
