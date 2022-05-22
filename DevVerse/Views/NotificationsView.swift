@@ -12,11 +12,16 @@ struct NotificationsView: View {
     
     var body: some View {
         ScrollView {
-            VStack {
+            VStack(alignment: .leading) {
+                Text("Notifications")
+                    .font(.title)
+                    .bold()
+                
                 ForEach(api.notifications) { notification in
-                    Text(notification.repository.full_name)
+                    NotificationCardView(notification: notification)
                 }
             }
+            .padding()
         }
         .onAppear {
             Task {
