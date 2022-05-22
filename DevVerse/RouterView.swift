@@ -12,7 +12,7 @@ struct RouterView: View {
     
     var body: some View {
         if auth.authenticated {
-            Text("Authenticated!")
+            AppView()
         } else {
             AuthView()
         }

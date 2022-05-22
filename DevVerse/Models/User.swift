@@ -8,6 +8,7 @@
 import Foundation
 
 struct User: Codable {
+    var id: Int
     var username: String
     var email: String
     var phone: String
@@ -15,10 +16,11 @@ struct User: Codable {
     var token: String
     
     enum CodingKeys: String, CodingKey {
+        case id
         case username
         case email
         case phone
-        case name = "display_name"
+        case name
         case token = "github_oauth_token"
     }
 }

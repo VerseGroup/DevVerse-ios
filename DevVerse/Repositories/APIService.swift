@@ -16,10 +16,19 @@ class APIService: ObservableObject {
     func signIn(token: String) async -> User {
         
         let params: [String: String] = [
-            "Oauth_Token": token
+            "oauth_token": token
         ]
         
-        let dataTask = AF.request(baseURL + "/signIn", method: .post, parameters: params)
+        
+//        AF.request(baseURL + "/signIn", method: .post, parameters: params, encoding: JSONEncoding.default)
+//                                    .cURLDescription { description in
+//                                        print("curl: " + description)
+//                                    }
+//                                    .response(completionHandler: { data in
+//                                        debugPrint("data: " + data.debugDescription)
+//                                    })
+        
+        let dataTask = AF.request(baseURL + "/signIn", method: .post, parameters: params, encoding: JSONEncoding.default)
             .serializingDecodable(User.self)
         
         let response = await dataTask.response
@@ -31,7 +40,7 @@ class APIService: ObservableObject {
             print("error: \(error)")
         }
         
-        return User(username: "", email: "", phone: "", name: "", token: "")
+        return User(id: 0, username: "", email: "", phone: "", name: "", token: "")
     }
     
     // make sure phone is properly formatted with +1##########
@@ -43,13 +52,13 @@ class APIService: ObservableObject {
             "phone_number": phone
         ]
         
-        AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
-                                    .cURLDescription { description in
-                                        print(description)
-                                    }
-                                    .response(completionHandler: { data in
-                                        debugPrint(data)
-                                    })
+//        AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
+//                                    .cURLDescription { description in
+//                                        print(description)
+//                                    }
+//                                    .response(completionHandler: { data in
+//                                        debugPrint(data)
+//                                    })
         
         let dataTask = AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
             .serializingDecodable(User.self)
@@ -63,6 +72,6 @@ class APIService: ObservableObject {
             print("error: \(error)")
         }
         
-        return User(username: "", email: "", phone: "", name: "", token: "")
+        return User(id: 0, username: "", email: "", phone: "", name: "", token: "")
     }
 }

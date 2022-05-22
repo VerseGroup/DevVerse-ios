@@ -25,6 +25,9 @@ class AuthService: ObservableObject {
     
     private init() {
         addSubscribers()
+        Task {
+            await loadCurrentUser()
+        }
     }
     
     func addSubscribers() {
@@ -39,9 +42,9 @@ class AuthService: ObservableObject {
                         }
                     } else {
                         print("Signing in")
-                        Task {
-                            await self.signIn(token: token)
-                        }
+//                        Task {
+//                            await self.signIn(token: token)
+//                        }
                     }
                 } else {
                     print("token is nil")
@@ -50,8 +53,15 @@ class AuthService: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func loadCurrentUser() {
-        
+    // loads user if exists
+    func loadCurrentUser() async {
+        guard
+            let token = UserDefaults.standard.string(forKey: "token")
+        else {
+            authenticated = false
+            return
+        }
+        await signIn(token: token)
     }
     
     // returns User model
@@ -59,11 +69,15 @@ class AuthService: ObservableObject {
     func signIn(token: String) async {
         self.user = await api.signIn(token: token)
         self.authenticated = true
+        // persistence
+        UserDefaults.standard.set(token, forKey: "token")
     }
     
     @MainActor
     func signUp(token: String, phone: String) async {
         self.user = await api.signUp(token: token, phone: "+1\(phone)")
         self.authenticated = true
+        // persistence
+        UserDefaults.standard.set(token, forKey: "token")
     }
 }
