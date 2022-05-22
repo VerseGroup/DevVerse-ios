@@ -20,13 +20,13 @@ class APIService: ObservableObject {
         ]
         
         
-//        AF.request(baseURL + "/signIn", method: .post, parameters: params, encoding: JSONEncoding.default)
-//                                    .cURLDescription { description in
-//                                        print("curl: " + description)
-//                                    }
-//                                    .response(completionHandler: { data in
-//                                        debugPrint("data: " + data.debugDescription)
-//                                    })
+        AF.request(baseURL + "/signIn", method: .post, parameters: params, encoding: JSONEncoding.default)
+                                    .cURLDescription { description in
+                                        print("curl: " + description)
+                                    }
+                                    .response(completionHandler: { data in
+                                        debugPrint("data: " + data.debugDescription)
+                                    })
         
         let dataTask = AF.request(baseURL + "/signIn", method: .post, parameters: params, encoding: JSONEncoding.default)
             .serializingDecodable(User.self)
@@ -52,13 +52,13 @@ class APIService: ObservableObject {
             "phone_number": phone
         ]
         
-//        AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
-//                                    .cURLDescription { description in
-//                                        print(description)
-//                                    }
-//                                    .response(completionHandler: { data in
-//                                        debugPrint(data)
-//                                    })
+        AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
+                                    .cURLDescription { description in
+                                        print(description)
+                                    }
+                                    .response(completionHandler: { data in
+                                        debugPrint(data)
+                                    })
         
         let dataTask = AF.request(baseURL + "/addUser", method: .post, parameters: params, encoding: JSONEncoding.default)
             .serializingDecodable(User.self)
