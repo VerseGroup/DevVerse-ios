@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		16051854283A71E0004BB6CA /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16051853283A71E0004BB6CA /* Notifications.swift */; };
 		160F9077283A1D5E0077D47C /* RepoCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9076283A1D5E0077D47C /* RepoCardView.swift */; };
 		160F9079283A1F410077D47C /* RepoDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F9078283A1F410077D47C /* RepoDetailView.swift */; };
 		160F907D283A4CD80077D47C /* Idea.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160F907C283A4CD80077D47C /* Idea.swift */; };
@@ -56,6 +57,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		16051853283A71E0004BB6CA /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		160F9076283A1D5E0077D47C /* RepoCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoCardView.swift; sourceTree = "<group>"; };
 		160F9078283A1F410077D47C /* RepoDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailView.swift; sourceTree = "<group>"; };
 		160F907C283A4CD80077D47C /* Idea.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Idea.swift; sourceTree = "<group>"; };
@@ -188,6 +190,7 @@
 				164CDF712839C4E7000BE585 /* User.swift */,
 				16F08F90283A166700147C3E /* Repository.swift */,
 				160F907C283A4CD80077D47C /* Idea.swift */,
+				16051853283A71E0004BB6CA /* Notifications.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				16051854283A71E0004BB6CA /* Notifications.swift in Sources */,
 				16D845E528397CF5001ED072 /* ContentView.swift in Sources */,
 				164CDF782839F0B7000BE585 /* BoardsView.swift in Sources */,
 				16D8462128399297001ED072 /* Keys.swift in Sources */,
