@@ -96,4 +96,6 @@ class APIRepository: ObservableObject {
                 debugPrint("LOL: \(data.debugDescription)")
             })
     }
+    
+    func addTask()
 }
