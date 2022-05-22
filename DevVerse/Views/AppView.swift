@@ -16,10 +16,10 @@ struct AppView: View {
                     Text("Home")
                 }
             
-            BoardsView()
+            IdeasView()
                 .tabItem {
-                    Image(systemName: "list.dash.header.rectangle")
-                    Text("Boards")
+                    Image(systemName: "lightbulb")
+                    Text("Ideas")
                 }
             
             
